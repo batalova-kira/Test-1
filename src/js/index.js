@@ -23,10 +23,6 @@ function handlerWeather(e) {
 
 // Function створення розмітки
 
-
-
-
-
     const{data:{forecast:{forecastday}}}=params[0];
     const{data:{current:{temp_c},location: { country, name, localtime }}}=params[1];
     const{data:{}}=params[2];
