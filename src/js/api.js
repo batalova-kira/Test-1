@@ -25,11 +25,11 @@ const searchWeather = async (weatherCity) => {
 
   // API запити
 
-const responseYesterday=  axios.get(`${URL}${historyWeather}?${params}&dt=${'2023-09-07'}`);
-  const responseToday =  axios.get(`${URL}${currentWeather}?${params}`);
-  const responseTomorrow =  axios.get(`${URL}${forecastWeather}?${params}&days=2`);
-  const days = await Promise.all([responseYesterday,responseToday,responseTomorrow]);
-return days;
+// const responseYesterday=  axios.get(`${URL}${historyWeather}?${params}&dt=${'2023-09-07'}`);
+//   const responseToday =  axios.get(`${URL}${currentWeather}?${params}`);
+  const responseTomorrow = await axios.get(`${URL}${forecastWeather}?${params}&days=3`);
+  // const days = await Promise.all([responseYesterday,responseToday,responseTomorrow]);
+return responseTomorrow;
 
 };
 
