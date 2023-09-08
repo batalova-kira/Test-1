@@ -27,45 +27,21 @@
   background-position: center;
 }
 
-/* Утіліти*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.list {
-  list-style: none;
-}
-
-.link {
-  text-decoration: none;
-}
-
 // первинна стилізація ul
+
+.search {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    padding: 15px;
+    gap: 20px;
+    background-color: rgb(149, 205, 207);
+}
 
 .weather {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 30px;
-}
-
-.search {
-    display: flex;
-    justify-content: center;
-    padding: 15px;
-    gap: 20px;
 }
