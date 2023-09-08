@@ -59,6 +59,13 @@ img {
 .weather {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    gap: 20px;
 }
