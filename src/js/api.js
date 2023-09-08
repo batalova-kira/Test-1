@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Головний URL
 
-const URL = 'http://api.weatherapi.com/v1';
+const URL = 'https://api.weatherapi.com/v1';
 
 // Headers запитів
 
