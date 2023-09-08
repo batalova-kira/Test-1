@@ -8,6 +8,7 @@ const URL = 'https://api.weatherapi.com/v1';
 
 const historyWeather = '/history.json';
 const currentWeather = '/current.json';
+const forecastWeather = '/forecast.json';
 
 // Function виклику API
 
@@ -24,10 +25,11 @@ const searchWeather = async (weatherCity) => {
 
   // API запити
 
-const responseYesterday= await axios.get(`${URL}${historyWeather}?${params}&dt=${'2023-09-06'}`);
-  const responseToday = await axios.get(`${URL}${currentWeather}?${params}&dt=${'2023-09-08'}`);
-  const responseTomorrow = await axios.get(`${URL}${currentWeather}?${params}&dt=${'2023-09-11'}`);
-return [responseYesterday,responseToday,responseTomorrow];
+const responseYesterday=  axios.get(`${URL}${historyWeather}?${params}&dt=${'2023-09-07'}`);
+  const responseToday =  axios.get(`${URL}${currentWeather}?${params}`);
+  const responseTomorrow =  axios.get(`${URL}${forecastWeather}?${params}&days=2`);
+  const days = await Promise.all([responseYesterday,responseToday,responseTomorrow]);
+return days;
 
 };
 
