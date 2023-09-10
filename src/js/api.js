@@ -1,5 +1,9 @@
 import axios from "axios";
 
+// Function виклику API
+
+const searchWeather = async (weatherCity) => {
+
 // Головний URL
 
 const URL = 'https://api.weatherapi.com/v1';
@@ -9,11 +13,6 @@ const URL = 'https://api.weatherapi.com/v1';
 const historyWeather = '/history.json';
 const currentWeather = '/current.json';
 const forecastWeather = '/forecast.json';
-
-// Function виклику API
-
-const searchWeather = async (weatherCity) => {
-
 // Праметри API запиту
 
   const params = new URLSearchParams({
@@ -33,4 +32,10 @@ return responseTomorrow;
 
 };
 
-export { searchWeather };
+function searchConverter(params) {
+  
+};
+
+
+
+export { searchWeather,searchConverter };
