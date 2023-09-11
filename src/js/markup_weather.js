@@ -8,7 +8,8 @@ export default function createMarkupCard(params) {
 }}=params;
      return params.data.forecast.forecastday.map(({date,day})=>{
       return `
-      <ul  class="card list"> Data: ${date}
+      <ul  class="card list">
+      <li class="item-card">Data: ${date}</li>
       <li class="item-card">Country: ${country}</li>
       <li class="item-card">City: ${name}</li>
       <li class="item-card">Temp: ${day.avgtemp_c}°С</li>
