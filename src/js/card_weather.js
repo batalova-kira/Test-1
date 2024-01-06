@@ -5,5 +5,5 @@ const refs = getRefs();
 export default  function createCardWeather(res) {
     console.log(res);
     const markupCard = createMarkupCard(res);
-    refs.cardWeather.innerHTML = markupCard;
+    refs.cardWeather.innerHTML = markupCard.join("");
 };
